@@ -1,0 +1,18 @@
+
+
+<!--{% if result_picture %}
+    <img src="{{ result_picture.url }}" alt="Result">
+{% else %}
+    <p>No result picture available</p>
+{% endif %}-->
+
+{% if user.is_authenticated %}
+    <h1>Welcome, {{ user.username }}</h1>
+    {% if result_picture %}
+        <img src="{{ result_picture.url }}" alt="Result">
+    {% else %}
+        <p>No result picture available</p>
+    {% endif %}
+{% else %}
+    <p>Welcome, Guest</p>
+{% endif %}

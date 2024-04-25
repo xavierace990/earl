@@ -1,0 +1,332 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Favicon -->   
+	<link href="img/favicon.ico" rel="shortcut icon"/>
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,500,500i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+	<!-- Stylesheets -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/f3b99b4317.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="{% static "css/font-awesome.min.css" %}"/>
+	<link rel="stylesheet" href="{% static "css/owl.carousel.css" %}"/>
+	<link rel="stylesheet" href="{% static "css/style.css" %}"/>
+
+
+</head>
+<style>
+	.navbar {
+		position: sticky;
+		top: 0;
+		z-index: 1000;
+		backdrop-filter: blur(10px); /* Add blur effect */
+		background-color: rgba(255, 255, 255, 0.7); /* Add semi-transparent background color */
+	  }
+	  
+</style>
+<body>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- Header section -->
+	
+	<div>
+		<div style="background:  rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px)" class="offcanvas offcanvas-end" id="carousel">
+			<!--header-->
+			<div class="offcanvas-header ">
+			  <img class="offcanvas-title " style="width: 140px;border-radius: 50%;" src="{% static 'img/earl-logo.png' %}" alt="">
+			  <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+			</div>
+			<!--body-->
+			<div class="offcanvas-body p-4  ">
+			  <a style="color: black;font-size: 15px;font-weight: lighter;" class="text-decoration-none " href="{% url 'index' %}">
+				<p style="color: black;font-size: 15px;font-weight: lighter;">Home</p>
+			  </a>
+			  <a style="color: black;font-size: 15px;" class="text-decoration-none  " href="{% url 'about' %}">
+				<p style="color: black;font-size: 15px;font-weight: lighter;">About</p>
+			  </a>
+			  <a  style="color: black;font-size: 15px;" class="text-decoration-none" href="{% url 'blog' %}">
+				<p style="color: black;font-size: 15px;font-weight: lighter;">Blog</p>
+			  </a>
+			  <a style="color: black;font-size: 15px;"  class="text-decoration-none" href="{% url 'contact' %}">
+				<p style="color: black;font-size: 15px;font-weight: lighter;">contact</p>
+			  </a>
+			  <a style="color: black;font-size: 15px;"  class="text-decoration-none" href="">
+				<p style="color: black;font-size: 15px;font-weight: lighter;">Gallery</p>
+			  </a>
+			  
+			  </a>
+			</div>
+		
+		  </div>
+		
+		  <!--hamburger-menu-->
+
+		  <nav style="" class="navbar navbar-expand-md navbar-dark  ">
+			<div class="container-fluid mt-1 ">
+			 <a href="{% url 'index' %}"> <img class="img-fluid" style="width: 80px;margin-left: 20px;border-radius: 50%;" src="../static/img/earl-logo.png" alt=""></a>
+		
+			  <div style="background-image: url('');" class=" m-0 text-white">
+				<button class="btn btn-secondary mt-3 m-3 " type="button" data-bs-toggle="offcanvas" data-bs-target="#carousel">
+				  <i class="fa-solid fa-bars fa-fade"></i>
+				</button>
+			  </div>
+			</div>
+		  </nav>
+	  </nav>
+	  
+	
+
+	<!-- Hero section -->
+  <section class="hero-section" style="background-image: url('{% static 'img/bg.jpg' %}'); background-size: cover; background-position: center;">
+   
+	<div class="container">
+        <div class="hero-text text-white">
+            <h2>Welcome To Earlham International school Website</h2>
+            <p>
+              Welcome to the enchanting world of Earlham International School!
+              <br>
+              Immerse yourself in a realm of boundless opportunities, where every mind is ignited, and every heart finds its rhythm.<br> Here, we foster a community of curious minds, nurturing them to reach for the stars and beyond.
+              <br>
+              Explore the depths of knowledge, where learning becomes an adventure and discovery knows no bounds. Join us on a journey of growth, empowerment, and transformation.
+              
+              At Earlham International School, excellence is not just a goal; it's our way of life.</p>
+        </div>
+        <div class="row">
+          <div class=" col justify-content-center p-3">
+             
+                  <center>
+                    <div class="row">
+                      <div class="col justify-content-center ">
+                          <button class="site-btn btn-block mb-3 p-3"><a style="text-decoration: none;color: white;" href="{% url 'register' %}">Sign Up Now</a></button>
+                          <button class="site-btn btn-block p-3"><a style="text-decoration: none;color: white;" href="{% url 'login' %}">Login In Now</a></button>
+                      </div>
+                  </div>
+                  </center>
+            
+          </div>
+      </div>
+      
+</section>
+
+	<!-- Hero section end -->
+
+
+	<!-- categories section -->
+	<section class="categories-section spad">
+		<div class="container">
+			<div class="section-title">
+				<h2>Our Subject Categories</h2>
+				<p>
+          Here is a list of some subjects we offer at our school:<br>
+          These subjects provide a broad foundation for our students' education, encompassing core academic disciplines as well as opportunities for artistic and physical development.</p>
+			</div>
+			<div class="row">
+				<!-- categorie -->
+				<div class="col-lg-4 col-md-6">
+					<div class="categorie-item">
+						<div class="ci-thumb set-bg" data-setbg="{% static "img/categories/1.jpg"%} "></div>
+						<div class="ci-text">
+							<h5>IT Development</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur</p>
+							<span>120 Courses</span>
+						</div>
+					</div>
+				</div>
+				<!-- categorie -->
+				<div class="col-lg-4 col-md-6">
+					<div class="categorie-item">
+						<div class="ci-thumb set-bg" data-setbg="{% static "img/categories/2.jpg"%}"></div>
+						<div class="ci-text">
+							<h5>Web Design</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur</p>
+							<span>70 Courses</span>
+						</div>
+					</div>
+				</div>
+				<!-- categorie -->
+				<div class="col-lg-4 col-md-6">
+					<div class="categorie-item">
+						<div class="ci-thumb set-bg" data-setbg="{% static "img/categories/3.jpg"%}"></div>
+						<div class="ci-text">
+							<h5>Illustration & Drawing</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur</p>
+							<span>55 Courses</span>
+						</div>
+					</div>
+				</div>
+				<!-- categorie -->
+				<div class="col-lg-4 col-md-6">
+					<div class="categorie-item">
+						<div class="ci-thumb set-bg" data-setbg="{% static "img/categories/4.jpg" %} "></div>
+						<div class="ci-text">
+							<h5>Social Media</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur</p>
+							<span>40 Courses</span>
+						</div>
+					</div>
+				</div>
+				<!-- categorie -->
+				<div class="col-lg-4 col-md-6">
+					<div class="categorie-item">
+						<div class="ci-thumb set-bg" data-setbg="{% static "img/categories/5.jpg" %} "></div>
+						<div class="ci-text">
+							<h5>Photoshop</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur</p>
+							<span>220 Courses</span>
+						</div>
+					</div>
+				</div>
+				<!-- categorie -->
+				<div class="col-lg-4 col-md-6">
+					<div class="categorie-item">
+						<div class="ci-thumb set-bg" data-setbg="{% static "img/categories/6.jpg"%}"></div>
+						<div class="ci-text">
+							<h5>Cryptocurrencies</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur</p>
+							<span>25 Courses</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- categories section end -->
+
+
+	<!-- search section -->
+	<section class="search-section">
+		<div class="container">
+			<div class="search-warp">
+				<div class="section-title text-white">
+					<h2>Search your course</h2>
+				</div>
+				<div class="row">
+					<div class="col-md-10 offset-md-1">
+						<!-- search form -->
+						<form class="course-search-form">
+							<input type="text" placeholder="Course">
+							<input type="text" class="last-m" placeholder="Category">
+							<button class="site-btn">Search Couse</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- search section end -->
+
+
+	<br>
+	<!-- course section end -->
+
+
+	<!-- signup section -->
+  <section class="signup-section spad">
+    <div class="signup-bg set-bg" data-setbg="{% static "img/signup-bg.jpg"%}"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="signup-warp">
+                    <div class="section-title text-white text-left">
+                        <h2>Sign up to become a student</h2>
+                        <p>Please kindly take your time to fill out this form so that we can get back to you.
+                          Thank you.
+                        </p>
+                    </div>
+                    <!-- signup form -->
+					<form class="signup-form" action="{% url 'signup' %}" method="post">
+						{% csrf_token %}
+						<input type="text" name="name" placeholder="Your Name">
+						<input type="text" name="email" placeholder="Your E-mail">
+						<input type="text" name="phone" placeholder="Your Phone">
+						<button class="site-btn" type="submit">Sign up</button>
+					</form>
+					
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+	<!-- signup section end -->
+
+
+	<!-- banner section -->
+	<section class="banner-section spad">
+		<div class="container">
+			<div class="section-title mb-0 pb-2">
+				<h2>Join Our School Now!</h2>
+				<p>"In our school, we pride ourselves on offering a diverse range of subjects to cater to the interests and academic needs of our students. From core subjects like Mathematics, Science, History, and Literature to specialized areas such as Languages, Geography, Computer Science, Art, and Music, we ensure that each student has the opportunity to explore and excel in their chosen fields.
+
+          Additionally, we are committed to continuously updating and expanding our curriculum to stay abreast of the latest developments in education and to meet the evolving needs of our students. Whether it's introducing new courses, enhancing existing ones, or providing innovative learning opportunities, we strive to create an enriching academic environment that fosters growth, creativity, and success."</p>
+			</div>
+			<div class="text-center pt-5">
+				<a href="{% url 'register' %}" class="site-btn">Register Now</a>
+			</div>
+		</div>
+	</section>
+	<!-- banner section end -->
+
+
+	<!-- footer section -->
+  <center>
+	<footer class="footer-section spad pb-0">
+		<div class="footer-top">
+			<div class="footer-warp">
+				<div style="" class="row justify-content-center">
+					<div class="widget-item">
+						<h4>school image</h4>
+						<img src="../static/img/earl-logo.png" alt="school-logo">
+					</div>
+
+          	<div class="widget-item">
+						<h4>Contact Info</h4>
+						<ul class="contact-list">
+							<li>1481 Creekside Lane <br>Avila Beach, CA 931</li>
+							<li>+53 345 7953 32453</li>
+							<li>yourmail@gmail.com</li>
+						</ul>
+					</div>
+					<div class="widget-item">
+						<h4>Quick Links</h4>
+						<ul>
+							<li><a href="{% url 'index' %}">Home</a></li>
+							<li><a href="{% url 'about' %}">About </a></li>
+							<li><a href="{% url 'contact' %}">Contact</a></li>
+							<li><a href="{% url 'blog' %}">Blog</a></li>
+							
+						</ul>
+					</div>
+					<div class="widget-item">
+						<h4>Newsletter</h4>
+						<form class="footer-newslatter">
+							<input type="email" placeholder="E-mail">
+							<button class="site-btn">Subscribe</button>
+							<p>*We don’t spam</p>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</footer> 
+	<!-- footer section end -->
+  </center>
+
+	<!--====== Javascripts & Jquery ======-->
+  <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+	<script src="{% static "js/circle-progress.min.js "%}"></script>
+	<script src="{% static "js/owl.carousel.min.js "%}"></script>
+	<script src="{% static "js/main.js" %}"></script>
+</body>  
+</html>
