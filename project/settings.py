@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-!=3-2hc7$c9wscnkc96uxh^azksm_p4!-n!#a&entos*g1@fjg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'earlham.up.railway.app']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'earlham.up.railway.app','.vercel.app']
 
 CSRF_TRUSTED_ORIGINS = ['https://earlham.up.railway.app']
 
